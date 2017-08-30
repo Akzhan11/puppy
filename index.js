@@ -1,17 +1,18 @@
 const puppeteer = require('puppeteer');
-// Импортировать свои тесты тут
+const { login } = require('./tests/login.js');
 
 const _start = async function () {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
+
   page.on('console', (...args) => {
     console.log('PAGE LOG:', ...args);
   });
 
   // Вызывать свои тесты тут
-
+  await login(browser, page);
   browser.close();
 }
 
-// Вызов стартовой функции
+// Вызов стартовой     функции
 _start();
