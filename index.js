@@ -9,10 +9,7 @@ const _start = async function () {
     console.log('PAGE LOG:', ...args);
   });
 
-  // Вызывать свои тесты тут
   await login(browser, page);
   browser.close();
 }
-
-// Вызов стартовой     функции
 _start();

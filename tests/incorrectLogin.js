@@ -8,9 +8,7 @@ const incorrectLogin = async (browser, page) => {
     const countryCodes = await page.$$('.ant-select-dropdown-menu-item');
     countryCodes[3].click();
     await page.click('.ant-btn.ant-btn-primary.ant-btn-lg.btn-login');
-    if
-
     await page.screenshot({ path: 'screen/example1.png', fullPage: true });
-}
 
-exports.login = login
+
+exports.incorrectlogin = incorrectLogin;
